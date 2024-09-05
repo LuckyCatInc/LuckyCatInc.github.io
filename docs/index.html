@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 20px;
+            font-size: 1.2em;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            line-height: 1.6;
+        }
+
+        .skills ul, .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills ul li, .services ul li {
+            background-color: #ddd;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>あなたの名前</h1>
+        <p>Web Developer | ホームページ作成専門</p>
+    </header>
+
+    <div class="container">
+
+        <section class="section">
+            <h2>自己紹介</h2>
+            <p>私はホームページ作成を専門とするWebデベロッパーです。これまでに数多くのプロジェクトを手掛け、お客様に満足いただけるサイトを提供してきました。</p>
+        </section>
+
+        <section class="section skills">
+            <h2>スキルセット</h2>
+            <ul>
+                <li>HTML5/CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React.js / Vue.js</li>
+                <li>Node.js / Express</li>
+                <li>MySQL / MongoDB</li>
+                <li>レスポンシブデザイン</li>
+            </ul>
+        </section>
+
+        <section class="section portfolio">
+            <h2>ポートフォリオ</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="プロジェクト1">
+                    <h3>プロジェクト1</h3>
+                    <p>概要: 簡単な説明をここに記載。</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="プロジェクト2">
+                    <h3>プロジェクト2</h3>
+                    <p>概要: 簡単な説明をここに記載。</p>
+                </div>
+                <!-- 他のプロジェクトも同様に追加 -->
+            </div>
+        </section>
+
+        <section class="section services">
+            <h2>提供するサービス</h2>
+            <ul>
+                <li>ホームページ作成</li>
+                <li>SEO対策</li>
+                <li>レスポンシブデザイン</li>
+                <li>サイト運営サポート</li>
+            </ul>
+        </section>
+
+        <section class="section testimonials">
+            <h2>お客様の声</h2>
+            <div class="testimonial">
+                <p>"素晴らしい仕事をしてくれました！" - クライアント名</p>
+            </div>
+            <div class="testimonial">
+                <p>"非常にプロフェッショナルで、結果に大満足です。" - クライアント名</p>
+            </div>
+        </section>
+
+        <section class="section contact">
+            <h2>お問い合わせ</h2>
+            <div class="contact-form">
+                <form>
+                    <input type="text" name="name" placeholder="お名前">
+                    <input type="email" name="email" placeholder="メールアドレス">
+                    <textarea name="message" placeholder="メッセージ"></textarea>
+                    <button type="submit">送信</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 あなたの名前. All rights reserved.</p>
+        <p>
+            <a href="#">LinkedIn</a> |
+            <a href="#">GitHub</a> |
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+    <script>
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('メッセージが送信されました！');
+        });
+    </script>
+
+</body>
+</html>
