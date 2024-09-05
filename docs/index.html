@@ -1,142 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        header p {
-            margin: 5px 0 20px;
-            font-size: 1.2em;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .section p {
-            line-height: 1.6;
-        }
-
-        .skills ul, .services ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .skills ul li, .services ul li {
-            background-color: #ddd;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .portfolio-item {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .portfolio-item img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-
-        .testimonial {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-left: 5px solid #333;
-            margin-bottom: 10px;
-        }
-
-        .contact-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .contact-form button {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
-<body>
 
-    <header>
-        <h1>あなたの名前</h1>
-        <p>Web Developer | ホームページ作成専門</p>
-    </header>
+<body>
+    <nav class="pico-background-yellow-500">
+        <ul>
+            <li><img src="https://avatars.githubusercontent.com/u/180527201?s=64"></li>
+        </ul>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">サービス紹介</a></li>
+            <li><a href="#">お知らせ</a></li>
+            <li><a href="#"><button class="secondary">お問い合わせ</button></a></li>
+        </ul>
+    </nav>
 
     <div class="container">
-
         <section class="section">
             <h2>自己紹介</h2>
             <p>私はホームページ作成を専門とするWebデベロッパーです。これまでに数多くのプロジェクトを手掛け、お客様に満足いただけるサイトを提供してきました。</p>
@@ -215,11 +101,12 @@
     </footer>
 
     <script>
-        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+        document.querySelector('.contact-form form').addEventListener('submit', function (e) {
             e.preventDefault();
             alert('メッセージが送信されました！');
         });
     </script>
 
 </body>
+
 </html>
