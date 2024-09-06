@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="./css/style.css">
 
 <head>
     <meta charset="UTF-8">
@@ -11,24 +12,6 @@
 </head>
 
 <body>
-    <style>
-        h1 {
-            text-align: center;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .logo {
-            border-radius: 50%;
-        }
-
-        .swiper {
-            width: 50vw;
-            height: 40vh;
-        }
-    </style>
     <header>
         <nav>
             <ul>
@@ -154,29 +137,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
