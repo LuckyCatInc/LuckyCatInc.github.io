@@ -2,6 +2,7 @@
 <html lang="ja">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <head>
     <meta charset="UTF-8">
@@ -22,9 +23,14 @@
         .logo {
             border-radius: 50%;
         }
+
+        .swiper {
+            width: 50vw;
+            height: 40vh;
+        }
     </style>
     <header>
-        <nav class="">
+        <nav>
             <ul>
                 <li><img class="logo" src="https://avatars.githubusercontent.com/u/180527201?s=64"></li>
             </ul>
@@ -41,7 +47,29 @@
         <h1>About</h1>
         <div class="grid">
             <div class="center">
-                Carousel Coming soon...
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="https://placehold.jp/300x300.png">
+                        </div>
+                        <div class="swiper-slide"><img src="https://placehold.jp/300x300.png">
+                        </div>
+                        <div class="swiper-slide"><img src="https://placehold.jp/300x300.png">
+                        </div>
+                    </div>
+                    ...
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
             </div>
         </div>
         <h1>サービス紹介</h1>
@@ -125,6 +153,30 @@
         </nav>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
 </body>
 
 </html>
