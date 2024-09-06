@@ -1,2 +1,3 @@
 # LuckyCatInc.github.io
-HP
+
+[Link](https://luckycatinc.github.io/)
