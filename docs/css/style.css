@@ -2,11 +2,18 @@ h1 {
     text-align: center;
 }
 
+
+/* https://picocss.com/docs/nav#overflow の仕様により無駄な横須黒ロールが生まれるため、それをキャンセルする */
+nav {
+    overflow: hidden;
+}
+
 .center {
     text-align: center;
 }
 
 .logo {
+    margin-left: 1vw;
     border-radius: 50%;
 }
 
