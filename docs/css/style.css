@@ -2,10 +2,26 @@ h1 {
     text-align: center;
 }
 
-
-/* https://picocss.com/docs/nav#overflow の仕様により無駄な横須黒ロールが生まれるため、それをキャンセルする */
-nav {
+#full-header {
+    display: block;
     overflow: hidden;
+}
+
+#mini-header {
+    display: none;
+    overflow: visible;
+}
+
+@media (max-width:1024px) {
+    #full-header {
+        display: none;
+        overflow: hidden;
+    }
+    
+    #mini-header {
+        display: block;
+        overflow: visible;
+    }
 }
 
 .center {
