@@ -20,6 +20,15 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+{
+    // close dropdown menu when clicked
+    document.querySelectorAll('.dropdown a').forEach(item => {
+        item.addEventListener('click', () => {
+            item.closest('details').removeAttribute('open')
+        })
+    })
+}
+
 const backToTopButton = document.getElementById('back-to-top');
 
 window.addEventListener('scroll', () => {
