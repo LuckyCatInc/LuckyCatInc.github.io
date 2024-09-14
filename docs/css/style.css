@@ -2,6 +2,10 @@ h1 {
     text-align: center;
 }
 
+section {
+    margin-top: 3rem;
+}
+
 #full-header {
     display: block;
     overflow: hidden;
