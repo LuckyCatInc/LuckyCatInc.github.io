@@ -46,101 +46,110 @@
             </ul>
         </nav>
     </header>
-    
+
     <main class="container">
-        <h1 id="About">About</h1>
-        <div class="grid">
-            <div class="center">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide"><img src="https://placehold.jp/300x300.png">
-                        </div>
-                        <div class="swiper-slide"><img src="https://placehold.jp/300x300.png">
-                        </div>
-                        <div class="swiper-slide"><img src="https://placehold.jp/300x300.png">
-                        </div>
-                    </div>
-                    ...
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
+        <!-- Slider main container -->
+        <div class="swiper center">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="https://placehold.jp/300x300.png">
+                </div>
+                <div class="swiper-slide"><img src="https://placehold.jp/300x300.png">
+                </div>
+                <div class="swiper-slide"><img src="https://placehold.jp/300x300.png">
                 </div>
             </div>
-        </div>
-        <h1 id="サービス紹介">サービス紹介</h1>
-        <div class="grid">
-            <article>
-                <header class="center">
-                    <h2>脆弱性診断</h2>
-                </header>
-                <main class="center">
-                    <img src="./img/pentest_service_image.jpg">
-                </main>
-                <footer>
-                    <p>手動・自動を織り交ぜたセキュリティ診断サービスです。Webアプリケーションの脆弱性を詳細に分析し、攻撃リスクを未然に防ぐことで、安心・安全なシステム運用をサポートします。</p>
-                </footer>
-            </article>
-            <article>
-                <header class="center">
-                    <h2>Webサイト制作</h2>
-                </header>
-                <main class="center">
-                    <img src="./img/website_service_image.jpg">
-                </main>
-                <footer>
-                    <p>デザインからコーディングまで一貫して対応し、あなただけのオリジナルサイトを構築します。シンプルで使いやすいデザインを重視し、ユーザー体験を最適化します。</p>
-                </footer>
-            </article>
-            <article>
-                <header class="center">
-                    <h2>アクセス解析・SEO対策</h2>
-                </header>
-                <main class="center">
-                    <img src="./img/analysis_service_image.jpg">
-                </main>
-                <footer>
-                    <p>アクセス解析とSEO対策を組み合わせ、サイトのパフォーマンスを最大化します。検索順位の向上を目指し、ターゲットユーザーへのリーチを最適化し、効果的な運営をサポートします。</p>
-                </footer>
-            </article>
-        </div>
-        <h1 id="お知らせ">お知らせ</h1>
-        <table>
-            <tbody>
-                <th>2024/09/01</th>
-                <td>hoge</td>
-            </tbody>
-            <tbody>
-                <th>2024/09/01</th>
-                <td>hoge</td>
-            </tbody>
-            <tbody>
-                <th>2024/09/01</th>
-                <td>hoge</td>
-            </tbody>
-            <tbody>
-                <th>2024/09/01</th>
-                <td>hoge</td>
-            </tbody>
-            <tbody>
-                <th>2024/09/01</th>
-                <td>hoge</td>
-            </tbody>
-            <tbody>
-                <th>2024/09/01</th>
-                <td>hoge</td>
-            </tbody>
-        </table>
+            ...
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+        <section id="about">
+            <h1 id="About">About us</h1>
+
+            <section class="introduction-card">
+                <img class="introduction-card-icon" src="./img/dummy_proficon_01.jpg">
+                <section class="introduction-card-sentence">
+                    <header>K.S</header>
+
+                    <body>
+                        <p>
+                            ウェブ制作会社「hoge」の創業者兼CEO。10年以上の業界経験を持ち、クライアントのビジネス目標に合わせた革新的なウェブソリューションを提供しています。デザインから開発、マーケティング戦略まで一貫したサポートを行い、数多くのプロジェクトを成功に導いてきました。ユーザビリティとパフォーマンスを重視し、常に最新の技術を取り入れたサイト制作を追求しています。
+                        </p>
+                    </body>
+                </section>
+            </section>
+
+            <section class="introduction-card">
+                <img class="introduction-card-icon" src="./img/dummy_proficon_02.jpg">
+                <section class="introduction-card-sentence">
+                    <header>H.I</header>
+
+                    <body>
+                        <p>
+                            ウェブ制作会社「hoge」の最高技術責任者（CTO）。最新の技術トレンドを取り入れ、チームをリードして革新的なウェブソリューションの開発を推進しています。高度なプログラミングスキルと豊富な経験を活かし、パフォーマンス最適化やセキュリティ強化に尽力。常に高品質なサービスを提供し、クライアントのビジネス成功を技術的に支えています。
+                        </p>
+                    </body>
+                </section>
+            </section>
+        </section>
+
+        <section id="サービス紹介">
+            <h1>サービス紹介</h1>
+            <div class="grid">
+                <article>
+                    <header class="center">
+                        <h2>脆弱性診断</h2>
+                    </header>
+                    <main class="center">
+                        <img src="./img/pentest_service_image.jpg">
+                    </main>
+                    <footer>
+                        <p>手動・自動を織り交ぜたセキュリティ診断サービスです。Webアプリケーションの脆弱性を詳細に分析し、攻撃リスクを未然に防ぐことで、安心・安全なシステム運用をサポートします。</p>
+                    </footer>
+                </article>
+                <article>
+                    <header class="center">
+                        <h2>Webサイト制作</h2>
+                    </header>
+                    <main class="center">
+                        <img src="./img/website_service_image.jpg">
+                    </main>
+                    <footer>
+                        <p>デザインからコーディングまで一貫して対応し、あなただけのオリジナルサイトを構築します。シンプルで使いやすいデザインを重視し、ユーザー体験を最適化します。</p>
+                    </footer>
+                </article>
+                <article>
+                    <header class="center">
+                        <h2>アクセス解析・SEO対策</h2>
+                    </header>
+                    <main class="center">
+                        <img src="./img/analysis_service_image.jpg">
+                    </main>
+                    <footer>
+                        <p>アクセス解析とSEO対策を組み合わせ、サイトのパフォーマンスを最大化します。検索順位の向上を目指し、ターゲットユーザーへのリーチを最適化し、効果的な運営をサポートします。</p>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <section id="お知らせ">
+            <h1>お知らせ</h1>
+            <table>
+                <tbody>
+                    <th>2024/09/04</th>
+                    <td>活動開始</td>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <footer>

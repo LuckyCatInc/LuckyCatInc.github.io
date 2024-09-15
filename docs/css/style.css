@@ -2,6 +2,39 @@ h1 {
     text-align: center;
 }
 
+section {
+    margin-top: 3rem;
+}
+
+.introduction-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    border: 5px solid #a88;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgb(128, 128, 128, 0.5);
+}
+
+.introduction-card>.introduction-card-sentence {
+    margin: 1rem
+}
+
+.introduction-card>.introduction-card-sentence>header {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.introduction-card>.introduction-card-icon {
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    border-radius: 50%;
+}
+
 #full-header {
     display: block;
     overflow: hidden;
@@ -12,15 +45,21 @@ h1 {
     overflow: visible;
 }
 
-@media (max-width:1024px) {
+@media (max-width:768px) {
+
+    /* 閾値は　pico css　に合わせる */
     #full-header {
         display: none;
         overflow: hidden;
     }
-    
+
     #mini-header {
         display: block;
         overflow: visible;
+    }
+
+    .introduction-card {
+        flex-direction: column;
     }
 }
 
@@ -39,7 +78,8 @@ h1 {
 }
 
 #back-to-top {
-    display: none; /* ページ表示開始時はボタンは非表示 */
+    display: none;
+    /* ページ表示開始時はボタンは非表示 */
     position: fixed;
     bottom: 4vh;
     right: 1vw;
