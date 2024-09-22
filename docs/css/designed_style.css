@@ -1,0 +1,17 @@
+#pc-header {
+    display: flex;
+}
+
+#mobile-header {
+    display: none;
+}
+
+@media (max-width:768px) {
+    #pc-header {
+        display: none;
+    }
+
+    #mobile-header {
+        display: flex;
+    }
+}
