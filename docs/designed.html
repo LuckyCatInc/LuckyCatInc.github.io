@@ -8,12 +8,15 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="./css/designed_style.css" rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
     <header>
-        <nav
-            class="flex z-10 gap-5 justify-between px-3 w-full text-2xl text-center bg-gray-100 text-zinc-800">
+        <nav class="flex z-10 gap-5 justify-between px-3 w-full text-2xl text-center bg-gray-100 text-zinc-800">
             <div class="flex justify-center items-center my-auto whitespace-nowrap">
                 <img class="object-contain shrink-0 self-stretch my-auto rounded-full w-12 h-12"
                     src="https://avatars.githubusercontent.com/u/180527201?s=64" alt="LuckyCatInc logo">
@@ -60,7 +63,7 @@
         </div>
     </div>
 
-    <section class="flex flex-col items-center pt-10 pb-10 bg-zinc-300">
+    <!-- <section class="flex flex-col items-center pt-10 pb-10 bg-zinc-300">
         <div class="flex flex-wrap gap-10 justify-center items-center max-w-7xl px-5">
             <div class="center w-1/2 md:w-1/3">
                 <img class="object-contain w-full rounded-full" src="./img/carousel_01.jpg" alt="Company illustration">
@@ -71,6 +74,45 @@
                     サイトのUI/UXデザイン設計からアクセス分析、広告戦略まで幅広くご支援いたします。
                 </p>
             </div>
+        </div>
+    </section> -->
+    <section id="hero-image">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide bg-black">
+                    <img src="./img/hero_image01.jpg" class="object-cover h-screen">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/hero_image02.jpg" class="object-cover h-screen">
+                    <div>
+                        <header>LuckyCat Inc.</header>
+
+                        <body>
+                            <p>
+                                サイトのUI/UXデザイン設計からアクセス分析、広告戦略まで幅広くご支援いたします。
+                            </p>
+                        </body>
+                    </div>
+                </div>
+                <div class="absolute inset-10 flex items-center justify-center bg-black bg-opacity-50 text-white">
+                    <div class="m-4 text-4xl font-bold">LuckyCat Inc.</div>
+                    <div>
+                        <p>
+                            サイトのUI/UXデザイン設計からアクセス分析、広告戦略まで幅広くご支援いたします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
         </div>
     </section>
 
@@ -184,6 +226,7 @@
             <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" />
         </svg>
     </a>
+
 
     <script src="./js/designed_script.js"></script>
 </body>
