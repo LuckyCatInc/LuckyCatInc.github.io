@@ -1,178 +1,209 @@
 <!DOCTYPE html>
 <html lang="ja">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="stylesheet" href="./css/style.css">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <header id="full-header">
-        <nav>
-            <ul>
-                <li><img class="logo" src="https://avatars.githubusercontent.com/u/180527201?s=64"></li>
-            </ul>
-            <ul>
-                <li><a href="#About">About</a></li>
-                <li><a href="#サービス紹介">サービス紹介</a></li>
-                <li><a href="#お知らせ">お知らせ</a></li>
-                <li><button>お問い合わせ</button></li>
-            </ul>
+    <header>
+        <nav class="flex z-10 gap-5 justify-between px-3 w-full text-2xl text-center bg-gray-100 text-zinc-800">
+            <div class="flex justify-center items-center my-auto whitespace-nowrap">
+                <img class="object-contain shrink-0 self-stretch my-auto rounded-full w-12 h-12"
+                    src="https://avatars.githubusercontent.com/u/180527201?s=64" alt="LuckyCatInc logo">
+                <h1 class="self-stretch my-auto ml-2">LuckyCatInc</h1>
+            </div>
+
+            <div id="pc-header" class="flex gap-10 justify-center items-center">
+                <a href="#about" class="self-stretch my-auto">About us</a>
+                <a href="#services" class="self-stretch my-auto">サービス</a>
+                <a href="#news" class="self-stretch my-auto">お知らせ</a>
+                <a href="#contact"
+                    class="flex flex-col self-stretch px-1.5 my-auto text-base font-bold whitespace-nowrap rounded-full">
+                    <span class="px-4 py-2 bg-neutral-200 rounded-full">
+                        お問い合わせ
+                    </span>
+                </a>
+            </div>
+
+            <div id="mobile-header">
+                <button id="hamburger-open-button">
+                    <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <header id="mini-header">
-        <nav>
-            <ul>
-                <li><img class="logo" src="https://avatars.githubusercontent.com/u/180527201?s=64"></li>
-            </ul>
-            <ul>
-                <li>
-                    <details class="dropdown">
-                        <summary>Menu</summary>
-                        <ul>
-                            <li><a href="#About">About</a></li>
-                            <li><a href="#サービス紹介">サービス紹介</a></li>
-                            <li><a href="#お知らせ">お知らせ</a></li>
-                        </ul>
-                    </details>
-                </li>
-                <li><button>お問い合わせ</button></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Slider main container -->
-    <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <section>
-                    <div class="introduction-card">
-                        <img class="introduction-card-icon" src="./img/carousel_01.jpg">
-                        <section class="introduction-card-sentence">
-                            <header>LuckyCat Inc.</header>
-
-                            <body>
-                                <p>
-                                    サイトのUI/UXデザイン設計からアクセス分析、広告戦略まで幅広くご支援いたします。
-                                </p>
-                            </body>
-                        </section>
-                    </div>
-                </section>
+    <div id="hamburger-menu">
+        <div class="panel hidden fixed bg-gray-100 w-full h-auto">
+            <button class="close-button absolute top-0 right-0 m-4 text-2xl font-bold">
+                &times;
+            </button>
+            <div class="mt-16 grid grid-cols-1 gap-4 items-center justify-items-center">
+                <a href="#about" class="item text-4xl m-4">About us</a>
+                <a href="#services" class="item text-4xl m-4">サービス</a>
+                <a href="#news" class="item text-4xl m-4">お知らせ</a>
+                <a href="#contact" class="item text-4xl bg-neutral-200 px-4 py-2 m-4 rounded-full text-center">
+                    お問い合わせ
+                </a>
             </div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
     </div>
-    <main class="container">
 
-        <section id="about">
-            <h1 id="About">About us</h1>
-
-            <section class="introduction-card">
-                <img class="introduction-card-icon" src="./img/dummy_proficon_01.jpg">
-                <section class="introduction-card-sentence">
-                    <header>K.S</header>
-
-                    <body>
-                        <p>
-                            ウェブ制作会社「hoge」の創業者兼CEO。10年以上の業界経験を持ち、クライアントのビジネス目標に合わせた革新的なウェブソリューションを提供しています。デザインから開発、マーケティング戦略まで一貫したサポートを行い、数多くのプロジェクトを成功に導いてきました。ユーザビリティとパフォーマンスを重視し、常に最新の技術を取り入れたサイト制作を追求しています。
-                        </p>
-                    </body>
-                </section>
-            </section>
-
-            <section class="introduction-card">
-                <img class="introduction-card-icon" src="./img/dummy_proficon_02.jpg">
-                <section class="introduction-card-sentence">
-                    <header>H.I</header>
-
-                    <body>
-                        <p>
-                            ウェブ制作会社「hoge」の最高技術責任者（CTO）。最新の技術トレンドを取り入れ、チームをリードして革新的なウェブソリューションの開発を推進しています。高度なプログラミングスキルと豊富な経験を活かし、パフォーマンス最適化やセキュリティ強化に尽力。常に高品質なサービスを提供し、クライアントのビジネス成功を技術的に支えています。
-                        </p>
-                    </body>
-                </section>
-            </section>
-        </section>
-
-        <section id="サービス紹介">
-            <h1>サービス紹介</h1>
-            <div class="grid">
-                <article>
-                    <header class="center">
-                        <h2>脆弱性診断</h2>
-                    </header>
-                    <main class="center">
-                        <img src="./img/pentest_service_image.jpg">
-                    </main>
-                    <footer>
-                        <p>手動・自動を織り交ぜたセキュリティ診断サービスです。Webアプリケーションの脆弱性を詳細に分析し、攻撃リスクを未然に防ぐことで、安心・安全なシステム運用をサポートします。</p>
-                    </footer>
-                </article>
-                <article>
-                    <header class="center">
-                        <h2>Webサイト制作</h2>
-                    </header>
-                    <main class="center">
-                        <img src="./img/website_service_image.jpg">
-                    </main>
-                    <footer>
-                        <p>デザインからコーディングまで一貫して対応し、あなただけのオリジナルサイトを構築します。シンプルで使いやすいデザインを重視し、ユーザー体験を最適化します。</p>
-                    </footer>
-                </article>
-                <article>
-                    <header class="center">
-                        <h2>アクセス解析・SEO対策</h2>
-                    </header>
-                    <main class="center">
-                        <img src="./img/analysis_service_image.jpg">
-                    </main>
-                    <footer>
-                        <p>アクセス解析とSEO対策を組み合わせ、サイトのパフォーマンスを最大化します。検索順位の向上を目指し、ターゲットユーザーへのリーチを最適化し、効果的な運営をサポートします。</p>
-                    </footer>
-                </article>
+    <section id="hero-image">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="./img/hero_image01.jpg" class="object-cover h-screen">
+                    <div class="absolute inset-10 flex flex-wrap justify-center items-center bg-black bg-opacity-50 text-white">
+                        <div class="m-4 text-3xl md:text-4xl font-bold text-center">LuckyCat Inc.</div>
+                        <div class="p-10 text-xl">
+                            <p>
+                                サイトのUI/UXデザイン設計からアクセス分析、広告戦略まで幅広くご支援いたします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/hero_image02.jpg" class="object-cover h-screen">
+                    <div class="absolute inset-10 flex flex-wrap justify-center items-center bg-black bg-opacity-50 text-white">
+                        <div class="m-4 text-3xl md:text-4xl font-bold text-center">LuckyCat Inc.</div>
+                        <div class="p-10 text-xl">
+                            <p>
+                                サイトのUI/UXデザイン設計からアクセス分析、広告戦略まで幅広くご支援いたします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
-        <section id="お知らせ">
-            <h1>お知らせ</h1>
-            <table>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+
+    <section id="about" class="flex flex-col items-center px-5 py-20 bg-white">
+        <h2 class="section-title text-center text-4xl text-zinc-800 mb-10">About us</h2>
+        <div class="flex flex-wrap gap-10 items-center max-w-7xl">
+            <img class="rounded-full w-48" src="./img/dummy_proficon_01.jpg" alt="Team member portrait">
+            <div class="flex-1">
+                <h3 class="text-3xl">K.S</h3>
+                <p class="text-xl mt-4">
+                    ウェブ制作会社「hoge」の創業者兼CEO。10年以上の業界経験を持ち、クライアントのビジネス目標に合わせた革新的なウェブソリューションを提供しています。
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-10 items-center mt-16 max-w-7xl">
+            <img class="object-contain rounded-full w-48" src="./img/dummy_proficon_02.jpg" alt="Team member portrait">
+            <div class="flex-1">
+                <h3 class="text-3xl">H.I</h3>
+                <p class="text-xl mt-4">
+                    ウェブ制作会社「hoge」の最高技術責任者（CTO）。最新の技術トレンドを取り入れ、チームをリードして革新的なウェブソリューションの開発を推進しています。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="flex flex-col items-center px-5 py-20 bg-white">
+        <h2 class="section-title text-4xl text-center text-zinc-800 mb-10">サービス紹介</h2>
+        <div class="flex flex-wrap justify-center max-w-screen-2xl">
+            <div class="flex flex-col items-center w-full lg:w-1/3">
+                <img class="object-contain w-36 h-36 rounded-lg" src="./img/pentest_service_image.jpg" alt="脆弱性診断">
+                <h3 class="mt-7 text-2xl text-center">脆弱性診断</h3>
+                <p class="mt-6 px-10 text-center">
+                    手動・自動を織り交ぜたセキュリティ診断サービスです。Webアプリケーションの脆弱性を詳細に分析し、攻撃リスクを未然に防ぐことで、安心・安全なシステム運用をサポートします。
+                </p>
+            </div>
+            <div class="flex flex-col items-center w-full lg:w-1/3">
+                <img class="object-contain w-36 h-36 rounded-lg" src="./img/website_service_image.jpg" alt="Webサイト制作">
+                <h3 class="mt-7 text-2xl text-center">Webサイト制作</h3>
+                <p class="mt-6 px-10 text-center">
+                    デザインからコーディングまで一貫して対応し、あなただけのオリジナルサイトを構築します。シンプルで使いやすいデザインを重視し、ユーザー体験を最適化します。
+                </p>
+            </div>
+            <div class="flex flex-col items-center w-full lg:w-1/3">
+                <img class="object-contain w-36 h-36 rounded-lg" src="./img/analysis_service_image.jpg"
+                    alt="アクセス解析・SEO対策">
+                <h3 class="mt-7 text-2xl text-center">アクセス解析・SEO対策</h3>
+                <p class="mt-6 px-10 text-center">
+                    アクセス解析とSEO対策を組み合わせ、サイトのパフォーマンスを最大化します。検索順位の向上を目指し、ターゲットユーザーへのリーチを最適化し、効果的な運営をサポートします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="flex flex-col items-center py-20 bg-white">
+        <h2 class="section-title text-4xl text-center text-zinc-800 mb-10">お知らせ</h2>
+        <div class="max-w-2xl mx-auto">
+            <table class="w-full">
                 <tbody>
-                    <th>2024/09/04</th>
-                    <td>活動開始</td>
+                    <tr class="border-b">
+                        <td class="py-4 px-2 w-32 text-center">
+                            <div class="bg-gray-200 rounded-full px-4 py-2 inline-block">お知らせ</div>
+                        </td>
+                        <td class="py-4 px-2">活動開始</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-4 px-2 w-32 text-center">
+                            <div class="bg-gray-200 rounded-full px-4 py-2 inline-block">イベント</div>
+                        </td>
+                        <td class="py-4 px-2">新サービス発表会開催</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-4 px-2 w-32 text-center">
+                            <div class="bg-gray-200 rounded-full px-4 py-2 inline-block">お知らせ</div>
+                        </td>
+                        <td class="py-4 px-2">ウェブサイトリニューアル</td>
+                    </tr>
                 </tbody>
             </table>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <nav class="">
-            <ul>
-                <li><img class="logo" src="https://avatars.githubusercontent.com/u/180527201?s=64"></li>
-            </ul>
-            <ul>
-                <li><a href="#About">About</a></li>
-                <li><a href="#サービス紹介">サービス紹介</a></li>
-                <li><a href="#お知らせ">お知らせ</a></li>
-            </ul>
-            <ul>
-                <!-- dummy -->
-            </ul>
+        <nav class="p-10 bg-gray-100">
+            <div class="flex flex-col md:flex-row justify-center gap-10">
+                <div class="">
+                    <div class="flex items-center text-2xl">
+                        <img class="object-contain rounded-full w-12 h-12"
+                            src="https://avatars.githubusercontent.com/u/180527201?s=64" alt="LuckyCatInc logo">
+                        <span class="ml-2">LuckyCatInc</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-20">
+                    <ul class="text-base font-bold text-black">
+                        <li class="m-4"><a href="#">ホーム</a></li>
+                        <li class="m-4"><a href="#about">About us</a></li>
+                        <li class="m-4"><a href="#services">サービス</a></li>
+                        <li class="m-4"><a href="#news">お知らせ</a></li>
+                    </ul>
+                    <ul class="text-base font-bold text-black">
+                        <li class="m-4"><a href="#">お問い合わせ</a></li>
+                        <li class="m-4"><a href="#">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </footer>
 
@@ -182,7 +213,7 @@
         </svg>
     </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="./js/script.js"></script>
 </body>
 
