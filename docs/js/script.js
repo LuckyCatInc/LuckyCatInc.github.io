@@ -1,7 +1,7 @@
 const hamburger_open_button = document.querySelector('#hamburger-open-button')
 const hamburger_panel = document.querySelector('#hamburger-menu .panel')
 const hamburger_close_button = document.querySelector('#hamburger-close-button')
-const hamburger_panel_items = document.querySelectorAll('#hamburger-menu .panel .item')
+const hamburger_panel_items = document.querySelectorAll('#hamburger-menu .panel .internal-item')
 
 hamburger_open_button.addEventListener('click', () => {
     hamburger_panel.classList.remove("hidden")
